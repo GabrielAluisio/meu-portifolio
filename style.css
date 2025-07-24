@@ -25,10 +25,11 @@ body, html {
     
 }
 
+/*--- header ---*/
 
 nav { 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 100%;
     
@@ -48,9 +49,32 @@ li {
 a {
     color: white;
     text-decoration: none; 
+
+}
+
+a:hover {
+    color: #0073b1; 
 }
 
 
+#icons {
+    grid-area: 3 / 2 / 4 / 3;
+    z-index: 1;
+}
+
+.icon {
+    font-size: 1.6em; 
+    margin: 10px; 
+    color: #ffffff;      
+}
+.icon:hover {
+    color: #0073b1; 
+}
+
+/*--- FIM do header ---*/
+
+
+/*--- main ---*/
 
 #menu {
     background-image: url(imagens/roi-solomon-9X1oB2l6CH8-unsplash.jpg);
@@ -63,8 +87,8 @@ a {
     position: relative;
 
     display: grid;
-    grid-template-columns: 0.5fr 2fr 1fr 1fr;
-    grid-template-rows: 0 1fr 50px;
+    grid-template-columns: 0.5fr 4fr ;
+    grid-template-rows: 1.5fr 1fr;
 
 }
 #menu::after {
@@ -74,7 +98,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.438);
     z-index: 0;
     pointer-events: none; 
 }
@@ -84,14 +108,15 @@ a {
 #nome {
     z-index: 1;
     display: flex;
-    grid-area: 1 / 2 / 3 / 3;
-    justify-content: center;
+    grid-area: 1 / 2 / 2 / 3;
+    justify-content: end;
     flex-direction: column;
     font-family: 'Lora', serif;
-    
+    position: relative;
 }
 
 h1 {
+
     font-size: 100px;
     font-weight: 700;
     margin-left: -3px;
@@ -104,27 +129,39 @@ h2 {
     
 }
 
-h3 {
+p {
     font-family: 'Source Sans Pro', sans-serif;
     margin-left: 3px;
     letter-spacing: 2px;
     font-size: 23px;
 }
 
-#icons {
-    grid-area: 3 / 2 / 4 / 3;
+div#botao {
+    grid-area: 2 / 2 / 3 / 3;
+    padding-top: 30px;
+}
+
+main button {
+    position: relative;
+    padding: 10px 90px;
+    background: transparent;
+    cursor: pointer;
+    color: white;
     z-index: 1;
+    border: white solid 2px;
+    border-radius: 30px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    
+
 }
 
-.icon {
-    font-size: 1.6em; 
-    margin: 0 10px; 
-    color: #ffffff;      
+main button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
 
-}
-.icon:hover {
-    color: #0073b1; 
-}
+/*--- FIM do main ---*/
 
 
 #sobre    { 
