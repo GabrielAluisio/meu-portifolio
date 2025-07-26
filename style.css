@@ -129,11 +129,29 @@ h2 {
     
 }
 
-p {
+
+p.sub {
     font-family: 'Source Sans Pro', sans-serif;
     margin-left: 3px;
     letter-spacing: 2px;
-    font-size: 23px;
+    font-size: 18px;
+}
+
+div.linha {
+    display: flex;
+    gap: 10px; 
+}
+
+div.linha > p#traco {
+    color: #0073b1;
+    margin: -40px 0px;
+    font-size: 50px;
+}
+
+
+
+#back-end {
+    color: #0092e0;
 }
 
 div#botao {
@@ -157,20 +175,60 @@ main button {
 }
 
 main button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.226);
+    transition: background-color 0.3s ease;
 }
 
 /*--- FIM do main ---*/
 
 
-#sobre    { 
-    background-color: white;
+
+/*--- sobre ---*/
+#sobre{ 
+    display: grid;
+    grid-template: 0.5fr 3fr 0.5fr / 0.5fr 3fr 3fr 0.5fr;
+    background-image: linear-gradient(black, rgb(41, 41, 41));
     height: 100vh;
 }
 
-#habilidades  { 
+div.quem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    grid-area: 1 / 1 / 2 / -1;
+}
 
+
+#titulo {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+#foto {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.foto {
+  width: 400px;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+#texto_sobre {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    grid-area: 2 / 3 / 3 / 4;
+    padding: 40px;
+}
+#habilidades  { 
+    background-color: rgb(41, 41, 41);
 }
 
 #projetos  { 
