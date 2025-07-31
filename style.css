@@ -1,5 +1,30 @@
 @charset "UTF-8";
 
+:root {
+    --preto: #0D0D0D;
+    --branco: #D9D9D9;
+    --bebe: #3F83BF;
+    --azul_roxo: #265DA6;
+    --azul: #034AA6;
+
+
+
+    --cor-1: #05161A;
+    --cor-2: #072E33;
+    --cor-3: #0C7075;
+    --cor-4l: #0F969C;
+    --cor-5: #6DA5C0;
+    --cor-6: #294D61;
+
+    --cor-fundo: #0D0D0D;         /* fundo escuro */
+    --cor-principal: #00FFFF;     /* verde água brilhante (ciano) */
+    --cor-texto: #FFFFFF;         /* branco para contraste */
+    --cor-subtitulo: #999999;     /* cinza claro */
+    --cor-hover: #0F969C;         /* verde água mais suave */
+    --cor-escura: #05161A;        /* variação escura para blocos */
+}
+
+
 * {
     margin: 0px ; padding: 0px;
     box-sizing: border-box;
@@ -7,32 +32,40 @@
 
 body, html {
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    color: var(--branco);
 }
 
 #container {
     display: grid;
     min-height: 100vh;
-    grid-template: 70px auto auto auto auto / 1fr;
+    grid-template: 60px auto auto auto auto / 1fr;
     grid-template-areas:
         "header"
         "menu"
         "sobre"
         "habilidades"
         "projetos";
-    background-color: rgb(0, 0, 0);
+    background-color: var(--preto);
     
     
 }
 
 /*--- header ---*/
 
+header {
+    position: fixed;
+    width: 100%;
+    background-color: var(--cor-fundo);
+    z-index: 1000;
+    
+}
+
 nav { 
+    
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 100%;
-    
     font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -47,13 +80,12 @@ li {
 }
 
 a {
-    color: white;
+    color: var(--branco);
     text-decoration: none; 
-
 }
 
 a:hover {
-    color: #0073b1; 
+    color: var(--cor-hover); 
 }
 
 
@@ -65,10 +97,10 @@ a:hover {
 .icon {
     font-size: 1.6em; 
     margin: 10px; 
-    color: #ffffff;      
+    color: var(--branco);      
 }
 .icon:hover {
-    color: #0073b1; 
+    color: var(--cor-hover); 
 }
 
 /*--- FIM do header ---*/
@@ -77,18 +109,27 @@ a:hover {
 /*--- main ---*/
 
 #menu {
-    background-image: url(imagens/orange-chen-d4voyH-a1h0-unsplash\ \(3\).jpg);
-    background-size: cover;
-    background-position: center;
-    height: 90.4vh;
+  position: relative;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 0.5fr 4fr;
+  grid-template-rows: 1.5fr 1fr;
 
-    /* Efeito escuro e dramático */
-    filter: brightness(0.7) contrast(1.2) grayscale(0.2);
-    position: relative;
+  background-image: url(imagens/orange-chen-d4voyH-a1h0-unsplash\ \(3\).jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 0; 
+}
 
-    display: grid;
-    grid-template-columns: 0.5fr 4fr ;
-    grid-template-rows: 1.5fr 1fr;
+#menu::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: inherit;
+  filter: brightness(0.7) contrast(1.2) grayscale(0.2);
+  z-index: 1;
+}
+
 
 }
 #menu::after {
@@ -104,7 +145,6 @@ a:hover {
 }
 
 
-
 #nome {
     z-index: 1;
     display: flex;
@@ -115,14 +155,14 @@ a:hover {
     position: relative;
 }
 
-h1 {
+div#nome > h1 {
 
     font-size: 100px;
     font-weight: 700;
     margin-left: -3px;
 }
 
-h2 {
+div#nome > h2 {
     font-size: 50px;
     font-weight: 400;
     margin-bottom: -30px; 
@@ -143,7 +183,7 @@ div.linha {
 }
 
 div.linha > p#traco {
-    color: #0073b1;
+    color: var(--cor-principal);
     margin: -40px 0px;
     font-size: 50px;
 }
@@ -151,7 +191,7 @@ div.linha > p#traco {
 
 
 #back-end {
-    color: #0092e0;
+    color: var(--cor-principal);
 }
 
 div#botao {
@@ -177,8 +217,11 @@ main button {
 main button:hover {
     position: relative;
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0.226);
-    transition: background-color 0.3s ease;
+    background: linear-gradient(to left, var(--cor-hover)) ;
+    transition: linear-gradient 0.5s ease;
+    color: var(--cor-hover);
+    padding: 10px 30px;
+    border: var(--cor-hover) solid 2px; ;
 }
 
 /*--- FIM do main ---*/
@@ -188,8 +231,8 @@ main button:hover {
 /*--- sobre ---*/
 #sobre{ 
     display: grid;
-    grid-template: 0.5fr 3fr 0.5fr / 0.5fr 3fr 3fr 0.5fr;
-    background-image: linear-gradient(black, rgb(41, 41, 41));
+    grid-template: 2fr 4fr 0.5fr / 0.5fr 3fr 3fr 0.5fr;
+    background: linear-gradient(to bottom, #000000 10%, var(--preto) 100%);
     height: 100vh;
 }
 
@@ -203,11 +246,11 @@ div.quem{
 
 
 #titulo {
-    font-size: 26px;
+    font-size: 33px;
     font-weight: 700;
 }
 
-#foto {
+#moldura {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -215,20 +258,23 @@ div.quem{
 }
 
 .foto {
-  width: 400px;
+  width: 300px;
+  height: 500px;
   border-radius: 10px;
   padding: 40px;
 }
 
 #texto_sobre {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    grid-area: 2 / 3 / 3 / 4;
-    padding: 40px;
+  grid-area: 2 / 3 / 3 / 4;
+  padding: 40px;
+  border-left: 2px solid var(--cor-principal);
+  height: 70px; 
 }
+
+
 #habilidades  { 
-    background-color: rgb(41, 41, 41);
+    height: 100vh;
+    
 }
 
 #projetos  { 
