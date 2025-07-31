@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
 <body>
 
     <div id="container">
@@ -44,39 +45,82 @@
             <div id="botao">
                 <a href="http://" target="_blank"></a><button>Baixar CV</button></a>
             </div>
+
+            <div id="seta">
+                <span class="material-symbols-outlined" style="font-size: 50px; margin: 50px;" >keyboard_double_arrow_down</span>
+            </div>
         </main>
+
+
 
         <section id="sobre" style="grid-area: sobre;">
             <div class="quem">
-                <p class="sub" id="titulo">Boas-vinda ao meu portfólio</p>
+                <p class="sub" id="titulo">
+                    <span style="color: var(--cor-principal);">Boas-vindas</span>
+                    <span> ao meu </span>
+                    <span style="color: var(--cor-principal);">portfólio</span>
+                </p>
+
             </div>
 
-            <div id="moldura">
-                <!-- <img src="imagens/amor da minha vida.jpg" alt="let" class="foto"> -->
+            <div id="foto">
+                
+                 <div class="moldura">
+                    <img src="imagens/amor da minha vida.jpg" alt="let" id="self">
+                 </div>
             </div>
             <div id="texto_sobre">
                 <div class="linha" style="margin-bottom: 20px;">
-                    <h2>Sobre</h2><h2 style="color: var(--cor-hover);">Mim</h2>
+                    <h2 style="color: var(--cor-hover);">SOBRE MIM</h2>
                 </div>
                 <h4 style="margin-bottom: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing </h4>
-                <p>Lorem ipsum, dolor sit amet c
+                <p style="font-weight: 400;">Lorem ipsum, dolor sit amet c
                     onsectetur adipisicing elit. Quasi ipsa at la
                     bore quibusdam id illo f
-                    ugit eveniet laborum minus vero debitis, quam facere, na
-                    tus dolorem tempora voluptatum! Libero, culpa modi.</p>
-                <p style="margin-bottom: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit provident cumque reprehenderit veritatis moles
-                    tiae amet at fugiat earum totam maxime aspernatur velit corporis, cupiditate ad odit deser
-                    unt exercitationem atque dolore?</p>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aliquam odit aliquid rerum ut perspiciatis assumenda, ipsam a eos expedita ipsa iure voluptates, fugit, commodi eius accusantium ad corporis totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi laudantium incidunt culpa officiis vel veritatis minima, ab perspiciatis eum. Debitis aliquid adipisci, cumque quia ipsa totam. Sit, molestias omnis!</p>
-                
+                    ugit eveniet laborum minus vero debitis, quam facere, n
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aliquam odit
+                </p>
             </div>
+
+            <!--Projetos-->
+            <div class="conteiner_sobre" style="grid-area: 3 / 2 / 4 / 3; ">
+                <div id="icon">
+                    <span class="material-symbols-outlined" style="font-size: 40px;">developer_mode</span>
+                    <p style="margin-top: 20px; font-size: 14px;">TOTAL DE PROJETOS</p>
+                </div>
+                <div class="numeros">
+                    7
+                    <span class="material-symbols-outlined" style="font-size: 20px;">arrow_outward</span>
+                </div>
+            </div>
+            
+            
+            <!--Certificados-->
+            <div class="conteiner_sobre" style=" grid-area: 3 / 3 / 4 / 3; ">
+                <div id="icon">
+                    <span class="material-symbols-outlined" style="font-size: 40px; ">verified</span>
+                    <p style="margin-top: 20px; font-size: 14px;">CERTIFICADOS</p>
+                </div>
+                <div class="numeros">
+                    5
+                    <span class="material-symbols-outlined" style="font-size: 20px;">arrow_outward</span>
+                </div>
+            </div>
+
         </section>
+
+
+
 
         <section id="habilidades" style="grid-area: habilidades;">
             <h3>oi</h3>
 
         </section>
+
+
+
+
+
 
         <section id="projetos" style="grid-area: projetos;">
 
