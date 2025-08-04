@@ -62,6 +62,7 @@
 * {
     margin: 0px ; padding: 0px;
     box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 body, html {
@@ -318,6 +319,9 @@ div#seta {
     cursor: pointer;
 }
 
+#flecha{
+    font-size: 50px; margin: 50px;
+}
 
 /*--- FIM do main ---*/
 
@@ -388,21 +392,30 @@ div.quem{
 }
 
 
+#titulo_sobre{
+    margin-bottom: 20px; 
+    grid-area: 1 / 2 / 2 /-1; 
+    display: flex; 
+    margin: 40px; 
+    border-bottom: 2px solid var(--cor-hover); 
+    width: 300px;
+    color: var(--cor-hover); 
+    font-size: 27px; 
+    
+}
+
+
 #texto_sobre {
     grid-area: 2 / 2 / 3 / 3;
     padding: 40px;
     text-align: justify;  
     word-wrap: break-word; 
     border-radius: 20px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-
-
 }
 
-#texto_sobre:hover {
-    transform: scale(1.03); 
-}
+.espacamento {
+    margin-bottom: 20px;
+ }
 
 .conteiner_sobre {
     display: grid;
@@ -413,7 +426,7 @@ div.quem{
     padding: 20px;
     border: 0.5px solid rgba(170, 170, 170, 0.342);
     cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.5s ease, background-color 0.5s ease;
 
 }
 
@@ -446,14 +459,91 @@ div.quem{
 
 #habilidades  { 
     display: grid;
-    grid: 2fr 1fr / 0.5fr 1fr 1fr 1fr 0.5;
+    grid: 1fr 150px 4fr / 0.5fr 1fr 1fr 1fr 0.5fr;
     height: 100vh;
     background-color: var(--cor-escura);
 }
 
+#skills_div {
+    grid-area: 1 / 1 / 2 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
 
+#skills_projetos {
+    color: var(--cor-hover); 
+    font-size: 35px; 
+    margin: 30px;
+    border-bottom: 2px solid var(--cor-hover); 
+}
 
+#barra_bottons{
+    display: grid;
+    grid: auto / auto auto auto;
+    margin: 20px;
+    grid-area: 2 / 2 / 3 / 5;
+    background-color: rgba(3, 74, 166, 0.068); 
+    border-radius: 20px;
+    border: 0.5px solid rgba(170, 170, 170, 0.068);
+}
 
+.div_botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(3, 74, 166, 0.158); 
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    color: white;
+    border: 0.5px solid rgba(3, 74, 166, 0.233);
+    cursor: pointer;
+    transition:  background-color 0.5s ease;
+    
+}
+
+.div_botoes:hover {
+    background-color: rgba(3, 74, 166, 0.274); 
+
+}
+
+#skills {
+    display: flex;
+    justify-content: center;
+    grid-area: 3 / 2 / -1 / 5;    
+    gap: 20px; 
+    letter-spacing: 1px;
+}
+
+.div_logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(3, 74, 166, 0.219); 
+    padding: 20px;
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+    
+}
+
+.logo{
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.07); 
+}
 
 
 #projetos  { 

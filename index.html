@@ -18,7 +18,7 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Sobre mim</a></li>
-                    <li><a href="#">Habilidades</a></li>
+                    <li><a href="#">Skills & Projetos</a></li>
                     <li><a href="#">Projetos</a></li>
                 </ul>
                 <div id="icons">
@@ -39,7 +39,7 @@
                 <h2>GABRIEL</h2>
                 <h1>DINIZ</h1>
                 <div class="linha">
-                    <p id="traco">_</p><p class="sub">Desenvolvedor</p><p class="sub" id="back-end" >Back-End</p> <p style="margin-left: -10px; margin-top: 2px;">.</p>
+                    <p id="traco">_</p><p class="sub">Desenvolvedor</p><p class="sub" id="back-end" >Back-End</p>
                 </div>
             </div>
             <div id="botao">
@@ -48,7 +48,7 @@
             </div>
 
             <div id="seta">
-                <span class="material-symbols-outlined" style="font-size: 50px; margin: 50px;" >keyboard_double_arrow_down</span>
+                <span class="material-symbols-outlined" id="flecha">keyboard_double_arrow_down</span>
             </div>
         </main>
 
@@ -77,20 +77,19 @@
                  </div>
             </div>
 
-            <div style="margin-bottom: 20px; grid-area: 1 / 2 / 2 /-1; display: flex; margin: 40px; border-bottom: 2px solid var(--cor-hover); width: 300px;;">
-                    <h2 style="color: var(--cor-hover); font-size: 35px; ">Sobre Mim</h2>
+            <div id="titulo_sobre">
+                    <h2>Sobre Mim</h2>
                 </div>
 
             <div id="texto_sobre">
-                <h2 style="color: var(--cor-hover);">Oi, Eu sou o</h2>
-                <h2 style="margin-bottom: 20px;">Gabriel Aluisio Diniz</h2>
-                <p style="margin-bottom: 20px;">Sou estudande de Análise e Desenvolvimento de Sistema, sempre foi 
-                    apaixonado por tecnologia e por aprender novos conhecimentos. Sou movido pela curiosidade e 
-                    pela vontade de saber cada vez mais. Além, sou uma pessoa que sempre gosta de entregar o melhor 
-                    com muita dedicação. Atualmente estou me especializando em Desenvolvimento Back-End, porém como 
-                    pode ver nesse portifólio tenho conhecimentos sobre Front-end.</p>
-                <p>Meu objetivo é aplicar meus conhecimentos para criar soluções criativas, mas futuramente desejo me especializar 
-                    em Desenvolvimento de IA </p>
+                <h2 style="color: var(--cor-hover);">Oi, me chamo</h2>
+                <h2 class="espacamento">Gabriel Aluisio Diniz</h2>
+                <p class="espacamento">Desde criança sempre tive interesse por tecnologia, 
+                    passava horas na frente do computador e isso me levou a ser curioso e aprender coisas novas.
+                    Atualmente, sou estudante de Análise e Desenvolvimento de Sistemas, estou me especializando em 
+                    desenvolvimento Back-End. </p>
+                <p> Meu objetivo é aplicar meus conhecimentos para criar soluções criativas e, 
+                    para futuramente, me especializar em desenvolvimento de IA.</p>
             </div>
 
             <!--Projetos-->
@@ -124,10 +123,64 @@
 
 
         <section id="habilidades" style="grid-area: habilidades;">
-            <div style="margin-bottom: 20px; grid-area: 1 / 2 / 2 /-1; display: flex; margin: 40px; border-bottom: 2px solid var(--cor-hover); width: 300px;;">
-                <h2 style="color: var(--cor-hover); font-size: 35px; ">P</h2>
+            <div id="skills_div">
+                <h2 id="skills_projetos">Skills & Projetos</h2>
+                <p>Explore meus projetos e minhas experiências.</p>
             </div>
 
+            <div id="barra_bottons">
+                
+                <button class="div_botoes" style="grid-area: 1 / 1 / 2 / 2;">
+                    <span class="material-symbols-outlined">developer_mode</span>
+                    <p>Projetos</p>
+                </button>
+
+                <button class="div_botoes" style="grid-area: 1 / 2 / 2 / 3 ;">
+                    <span class="material-symbols-outlined">verified</span>
+                    <p>Certificados</p>
+                </button>
+
+                <button class="div_botoes" style="grid-area: 1 / 3 / 2 / 4; margin-right: 20px;">
+                    <span class="material-symbols-outlined">lightbulb</span>
+                    <p>Skills</p>
+                </button>
+
+            </div>
+
+            <div id="projetos">
+
+            </div>
+
+            <div id="certificados">
+
+            </div>
+
+            <div id="skills">
+                <div class="div_logo">
+                    <img src="imagens/Python-logo-notext.svg" alt="" class="logo">
+                    <h4>Python</h4>
+                </div>
+
+                <div class="div_logo">
+                    <img src="imagens/HTML5_Badge.svg" alt="" class="logo">
+                    <h4>HTML</h4>
+                </div>
+
+                <div class="div_logo">
+                    <img src="imagens/CSS3_logo.svg" alt="" class="logo">
+                    <h4>CSS</h4>
+                </div>
+
+                <div class="div_logo">
+                    <img src="imagens/Unofficial_JavaScript_logo_2.svg" alt="" class="logo">
+                    <h4>JavaScript</h4>
+                </div>
+
+                <div class="div_logo">
+                    <img src="imagens/mysql.jpg" alt="" class="logo">
+                    <h4>MySql</h4>
+                </div>
+            </div>
         </section>
 
 
