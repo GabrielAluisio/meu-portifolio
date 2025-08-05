@@ -9,26 +9,7 @@
     }
 }
 
-@keyframes vibrate-1 {
-  0% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translate(-1px, 1px);
-  }
-  40% {
-    transform: translate(-1px, -1px);
-  }
-  60% {
-    transform: translate(1px, 1px);
-  }
-  80% {
-    transform: translate(1px, -1px);
-  }
-  100% {
-    transform: translate(0);
-  }
-}
+
 
 
 
@@ -69,6 +50,7 @@ body, html {
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--branco);
+    background-color: var(--cor-escura);
 }
 
 .blurs {
@@ -129,14 +111,13 @@ body, html {
 #container {
     display: grid;
     min-height: 100vh;
-    grid-template: 60px auto 500px auto auto auto / 1fr;
+    grid-template: 60px auto 500px auto auto/ 1fr;
     grid-template-areas:
         "header"
         "menu"
         "boas-vindas"
         "sobre"
-        "habilidades"
-        "projetos";
+        "habilidades";
     background-color: var(--preto);
     
     
@@ -483,11 +464,12 @@ div.quem{
 #barra_bottons{
     display: grid;
     grid: auto / auto auto auto;
-    margin: 20px;
+    margin: 20px 0px;
     grid-area: 2 / 2 / 3 / 5;
     background-color: rgba(3, 74, 166, 0.068); 
-    border-radius: 20px;
-    border: 0.5px solid rgba(170, 170, 170, 0.068);
+    border-radius: 24px;
+    gap: 10px;
+    padding: 15px;
 }
 
 .div_botoes {
@@ -496,10 +478,7 @@ div.quem{
     align-items: center;
     flex-direction: column;
     background-color: rgba(3, 74, 166, 0.158); 
-    border-radius: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 20px;
+    border-radius: 15px;
     color: white;
     border: 0.5px solid rgba(3, 74, 166, 0.233);
     cursor: pointer;
@@ -512,12 +491,104 @@ div.quem{
 
 }
 
-#skills {
+/*--- projetos ---*/
+#projetos {
     display: flex;
+    grid-area: 3 / 2 / -1 / 5;   
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+
+.painel {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: 380px;
+    border-radius: 12px;
+    background-color: rgba(3, 74, 166, 0.068); 
+    
+    padding: 20px 20px 15px 20px;
+    justify-content: space-between;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.conteudo {
+    flex-grow: 1;
+}
+
+.painel:hover {
+    transform: scale(1.03); 
+    border: 1px solid rgba(170, 170, 170, 0.548);
+}
+
+
+.painel img {
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    margin: -20px;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+
+
+.painel h2 {
+    margin-bottom: 3px;
+}
+
+.painel p {
+    margin-bottom: 10px;
+}
+
+.oq_eu_usei {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+}
+.painel h4 {
+    background-color: rgba(3, 74, 166, 0.158); 
+    border-radius: 11px;
+    padding: 2px 7px;
+    border: 0.5px solid rgba(3, 74, 166, 0.233);
+    font-size: 15px;
+    
+}
+
+.painel button{
+
+    background-color: rgba(3, 74, 166, 0.158); 
+    color: white;
+    border: 0.5px solid rgba(3, 74, 166, 0.233);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition:  background-color 0.5s ease;
+    
+}
+
+.painel button:hover {
+    background-color: rgba(3, 74, 166, 0.274); 
+
+}
+
+
+
+/*--- Skills ---*/
+
+#skills {
+    display: none;
     justify-content: center;
     grid-area: 3 / 2 / -1 / 5;    
     gap: 20px; 
     letter-spacing: 1px;
+    flex-wrap: wrap;
 }
 
 .div_logo {
@@ -546,6 +617,3 @@ div.quem{
 }
 
 
-#projetos  { 
-
-}
