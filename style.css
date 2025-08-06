@@ -507,7 +507,7 @@ div.quem{
     display: flex;
     flex-direction: column;
     width: 320px;
-    height: 380px;
+    height: 450px;
     border-radius: 12px;
     background-color: rgba(3, 74, 166, 0.068); 
     
@@ -515,11 +515,10 @@ div.quem{
     justify-content: space-between;
     transition: transform 0.5s ease;
     will-change: transform;
+
 }
 
-.conteudo {
-    flex-grow: 1;
-}
+
 
 .painel:hover {
     transform: scale(1.03); 
@@ -527,15 +526,14 @@ div.quem{
 }
 
 
-.painel img {
-    height: 150px;
+.painel video {
+    display: block;
+    height: 190px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
-    margin: -20px;
-    margin-bottom: 0px;
     cursor: pointer;
+    object-position: center 43%;
 }
-
 
 
 .painel h2 {
@@ -544,6 +542,9 @@ div.quem{
 
 .painel p {
     margin-bottom: 10px;
+    backface-visibility: hidden;
+    will-change: transform;
+    -webkit-font-smoothing: antialiased;
 }
 
 .oq_eu_usei {
