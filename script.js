@@ -11,3 +11,24 @@ window.addEventListener('scroll', () => {
   }
 });
 
+
+function aparecerProjetos () {
+  const Projetos = document.getElementById('projetos')
+  const Skills = document.getElementById('skills')
+
+
+  Skills.style.display = 'none'
+  Projetos.style.display = 'flex'
+
+}
+
+function aparecerSkills () {
+  const Projetos = document.getElementById('projetos')
+  const Skills = document.getElementById('skills')
+
+
+  Skills.style.display = 'grid'
+  Projetos.style.display = 'none'
+
+}
+
