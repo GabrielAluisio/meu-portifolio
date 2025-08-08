@@ -142,37 +142,37 @@ nav {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-ul {
+nav ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
 }
 
-li {
+nav li {
     margin: 20px;
 }
 
-a {
+nav a {
     color: var(--branco);
     text-decoration: none; 
 }
 
-a:hover {
+nav a:hover {
     color: var(--cor-hover); 
 }
 
 
-#icons {
+nav #icons {
     grid-area: 3 / 2 / 4 / 3;
     z-index: 1;
 }
 
-.icon {
+nav .icon {
     font-size: 1.6em; 
     margin: 10px; 
     color: var(--branco);      
 }
-.icon:hover {
+nav .icon:hover {
     color: var(--cor-hover); 
 
 }
@@ -332,7 +332,7 @@ div.quem{
 /*--- sobre ---*/
 #sobre{ 
     display: grid;
-    grid-template: 1fr 2fr 0.5fr 1fr 0.5fr / 0.5fr 3fr 3fr 0.5fr;
+    grid-template: 150px 2fr  / 0.5fr 3fr 3fr 0.5fr;
     background: var(--cor-escura);
     height: 100vh;
 }
@@ -440,7 +440,7 @@ div.quem{
 
 #habilidades  { 
     display: grid;
-    grid: 1fr 150px 4fr / 0.5fr 1fr 1fr 1fr 0.5fr;
+    grid: 1fr 150px 4fr / 1fr 1fr 1fr 1fr 1fr;
     height: 100vh;
     background-color: var(--cor-escura);
 }
@@ -463,7 +463,8 @@ div.quem{
 
 #barra_bottons{
     display: grid;
-    grid: auto / auto auto auto;
+    grid: auto / auto auto;
+
     margin: 20px 0px;
     grid-area: 2 / 2 / 3 / 5;
     background-color: rgba(3, 74, 166, 0.068); 
@@ -493,7 +494,7 @@ div.quem{
 
 /*--- projetos ---*/
 #projetos {
-    display: flex;
+    display: none;
     grid-area: 3 / 2 / -1 / 5;   
     gap: 10px;
     justify-content: center;
@@ -506,60 +507,64 @@ div.quem{
 .painel {
     display: flex;
     flex-direction: column;
-    width: 320px;
-    height: 450px;
+    width: 350px;
+    height: 500px;
     border-radius: 12px;
     background-color: rgba(3, 74, 166, 0.068); 
     
     padding: 20px 20px 15px 20px;
     justify-content: space-between;
-    transition: transform 0.5s ease;
-    will-change: transform;
+    transition: transform 0.2s ease;
 
 }
 
 
 
 .painel:hover {
-    transform: scale(1.03); 
+    transform: scale(1.02); 
     border: 1px solid rgba(170, 170, 170, 0.548);
 }
 
 
 .painel video {
     display: block;
-    height: 190px;
+    height: 190px; width: 100%;
     object-fit: cover;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
     cursor: pointer;
-    object-position: center 43%;
+    
+}
+
+.painel img {
+    display: block;
+    height: 190px; width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    
 }
 
 
 .painel h2 {
-    margin-bottom: 3px;
+    margin-bottom: 15px;
 }
 
 .painel p {
     margin-bottom: 10px;
-    backface-visibility: hidden;
-    will-change: transform;
-    -webkit-font-smoothing: antialiased;
 }
 
 .oq_eu_usei {
     display: flex;
-    gap: 10px;
     flex-wrap: wrap;
-
+    gap: 10px;
 }
-.painel h4 {
+.painel li {
     background-color: rgba(3, 74, 166, 0.158); 
     border-radius: 11px;
     padding: 2px 7px;
     border: 0.5px solid rgba(3, 74, 166, 0.233);
     font-size: 15px;
-    
+    list-style: none;
 }
 
 .painel button{
@@ -575,7 +580,7 @@ div.quem{
 }
 
 .painel button:hover {
-    background-color: rgba(3, 74, 166, 0.274); 
+    background-color: rgba(166, 150, 3, 0.274); 
 
 }
 
@@ -584,13 +589,47 @@ div.quem{
 /*--- Skills ---*/
 
 #skills {
-    display: none;
+    display: grid;
+    grid: 1fr 1fr 1fr / 1fr;
+    grid-area: 3 / 2 / 5 / 5;    
+    
+}
+
+#all_linguagens {
+    display: grid;
+    grid: 65px 1fr / 1fr;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+
+#all_ferramentas {
+    margin-top: 20px;
+    display: grid;
+    grid: 65px 1fr / 1fr;
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.definicao_skill {
+    display: flex;
     justify-content: center;
-    grid-area: 3 / 2 / -1 / 5;    
-    gap: 20px; 
+    align-items: center;
+    background-color: rgba(3, 74, 166, 0.068); 
+    border: 0.5px solid rgba(3, 74, 166, 0.233);
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+}
+
+#linguagens {
+    display: flex;
+    gap: 20px;
     letter-spacing: 1px;
     flex-wrap: wrap;
+    grid-area: 2 / 1 / 3 / 2;
+    justify-content: center;
 }
+
+
 
 .div_logo {
     display: flex;
@@ -603,18 +642,35 @@ div.quem{
     border-radius: 10px;
     width: fit-content;
     height: fit-content;
-    
+    cursor: pointer;
+    width: 130px;
+    height: 130px;
 }
 
 .logo{
-    width: 80px;
-    height: 80px;
-    cursor: pointer;
+    width: 50px;
+    height: 50px;
     transition: transform 0.5s ease;
 }
 
-.logo:hover {
+.div_logo:hover .logo{
     transform: scale(1.07); 
 }
+
+
+
+.div_logo:hover h4 {
+    display: none;
+}
+
+.div_logo > p {
+    font-size: 16px;
+    display: none;
+}
+
+.div_logo:hover p {
+    display: inline-block;
+}
+
 
 

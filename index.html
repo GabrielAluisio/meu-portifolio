@@ -18,7 +18,7 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Sobre mim</a></li>
-                    <li><a href="#">Skills e Projetos</a></li>
+                    <li><a href="#">Projetos e Skills</a></li>
                 </ul>
                 <div id="icons">
                     <a href="#" target="_blank" class="icon">
@@ -86,30 +86,6 @@
 
             </div>
 
-            <!--Projetos-->
-            <div class="conteiner_sobre" style="grid-area: 4 / 2 / 5 / 3; ">
-                <div id="icon">
-                    <span class="material-symbols-outlined" style="font-size: 40px;">developer_mode</span>
-                    <p style="margin-top: 20px; font-size: 14px;">TOTAL DE PROJETOS</p>
-                </div>
-                <div class="numeros">
-                    7
-                    <span class="material-symbols-outlined" style="font-size: 20px;">arrow_outward</span>
-                </div>
-            </div>
-            
-            
-            <!--Certificados-->
-            <div class="conteiner_sobre" style=" grid-area: 4 / 3 / 5 / 4; ">
-                <div id="icon">
-                    <span class="material-symbols-outlined" style="font-size: 40px; ">verified</span>
-                    <p style="margin-top: 20px; font-size: 14px;">CERTIFICADOS</p>
-                </div>
-                <div class="numeros">
-                    5
-                    <span class="material-symbols-outlined" style="font-size: 20px;">arrow_outward</span>
-                </div>
-            </div>
 
         </section>
 
@@ -118,23 +94,18 @@
 
         <section id="habilidades" style="grid-area: habilidades;">
             <div id="skills_div">
-                <h2 id="skills_projetos">Skills e Projetos</h2>
+                <h2 id="skills_projetos">Projetos e Skills</h2>
                 <p>Explore meus projetos e minhas experiências.</p>
             </div>
 
             <div id="barra_bottons">
                 
-                <button class="div_botoes" style="grid-area: 1 / 1 / 2 / 2;">
+                <button class="div_botoes" id="botao_projetos" style="grid-area: 1 / 1 / 2 / 2;">
                     <span class="material-symbols-outlined">developer_mode</span>
                     <p>Projetos</p>
                 </button>
 
-                <button class="div_botoes" style="grid-area: 1 / 2 / 2 / 3 ;">
-                    <span class="material-symbols-outlined">verified</span>
-                    <p>Certificados</p>
-                </button>
-
-                <button class="div_botoes" style="grid-area: 1 / 3 / 2 / 4;">
+                <button class="div_botoes" id="botao_skills" style="grid-area: 1 / 2 / 2 / 3;">
                     <span class="material-symbols-outlined">lightbulb</span>
                     <p>Skills</p>
                 </button>
@@ -144,107 +115,155 @@
             <div id="projetos">
                 <div class="painel">
                     
-                    <video width="100%" autoplay muted loop playsinline>
-                        <source src="videos/Vou-de-que-video-ezgif.com-gif-to-mp4-converter.mp4" type="video/mp4">
+                    <video  style="object-position: center 43%;" autoplay muted loop playsinline >
+                        <source src="videos/Vou-de-que-video-ezgif.com-gif-to-mp4-converter.mp4" type="video/mp4" >
                         Seu navegador não suporta vídeos em HTML5.
                     </video>
                     
 
 
                     <div class="conteudo">
-                        <h2>Bot do WhatsApp ou Bot de Clima</h2>
+                        <h2>Vou de que?</h2>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing e
-                            lit. Non voluptatem praesentium eaque dignissimos ad 
+                        <p>Um bot no WhatsApp que utiliza APIs externas para fornecer sugestões de roupas
+                            baseadas na previsão do tempo.
+
+
+        
 
                         </p>
 
-                        <div class="oq_eu_usei">
-                            <h4>Python</h4> 
-                            <h4>JavaScript</h4> 
-                            <h4>nao sei oq</h4>
-                            <h4>nao sei oq</h4>
+                        <ul class="oq_eu_usei">
+                            <li>Python</li>
+                            <li>Docker</li>
+                            <li>Flask</li>
+                            <li>OpenWeather API</li>
+                            <li>WhatsApp API</li>
+                        </ul>
 
-                        </div>
                     </div>
                     <button>Ver mais</button>
                 </div>
 
                 <div class="painel">
                     
-                    <img src="imagens/teste.jpg" alt="">
+                    <img src="imagens/Captura de tela 2025-08-06 205414.png" alt="">
 
 
                     <div class="conteudo">
-                        <h2>titulo</h2>
+                        <h2>To-Do List RESTful</h2>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing e
-                            lit. Non voluptatem praesentium eaque dignissimos ad 
-
-                        </p>
-
-                        <div class="oq_eu_usei">
-                            <h4>Python</h4> 
-                            <h4>JavaScript</h4> 
-                            <h4>nao sei oq</h4>
-                        </div>
-                    </div>
-                    <button>Ver mais</button>
-                </div>
-
-                <div class="painel">
-                    
-
-
-
-                    <div class="conteudo">
-                        <h2>titulo</h2>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing e
-                            lit. Non voluptatem praesentium eaque dignissimos ad 
+                        <p>
+                            Lista de tarefas com API RESTful em Python (Flask), conectada a banco de dados MySQL.
                             
+
                         </p>
 
-                        <div class="oq_eu_usei">
-                            <h4>Python</h4> 
-                            <h4>JavaScript</h4> 
-                            <h4>nao sei oq</h4>
+                        <ul class="oq_eu_usei">
+                            <li>Python</li>
+                            <li>Flask</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>MySQL</li>
+                        </ul>
 
-                        </div>
                     </div>
                     <button>Ver mais</button>
                 </div>
-            </div>
-
-            <div id="certificados">
 
             </div>
 
             <div id="skills">
-                <div class="div_logo">
-                    <img src="imagens/Python-logo-notext.svg" alt="" class="logo">
-                    <h4>Python</h4>
+
+                <div id="all_linguagens">
+                    <div class="definicao_skill" style="grid-area: 1 / 1 / 2 / 2 ;">
+                        Linguagens de Programação
+                    </div>
+
+
+                    <div id="linguagens">
+                        <div class="div_logo">
+                            <img src="imagens/Python-logo-notext.svg" alt="" class="logo">
+                            <h4>Python</h4>
+                            <p>Intermediário</p>
+                        </div>
+
+                        <div class="div_logo">
+                            <img src="imagens/HTML5_Badge.svg" alt="" class="logo">
+                            <h4>HTML</h4>
+                            <p>Intermediário</p>
+                        </div>
+
+                        <div class="div_logo">
+                            <img src="imagens/CSS3_logo.svg" alt="" class="logo">
+                            <h4>CSS</h4>
+                            <p>Intermediário</p>
+                        </div>
+
+                        <div class="div_logo">
+                            <img src="imagens/Unofficial_JavaScript_logo_2.svg" alt="" class="logo">
+                            <h4>JavaScript</h4>
+                            <p>Intermediário</p>
+                        </div>
+
+                        <div class="div_logo">
+                            <img src="imagens/a80de9a9e9f4896852cacd8a8a4e194e.png" alt="" class="logo">
+                            <h4>SQL</h4>
+                            <p>Intermediário</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="div_logo">
-                    <img src="imagens/HTML5_Badge.svg" alt="" class="logo">
-                    <h4>HTML</h4>
+
+
+                <div id="all_ferramentas">
+                    <div class="definicao_skill" style="grid-area: 1 / 1 / 2 / 2 ;">
+                        Frameworks / Bibliotecas / Ferramentas
+                    </div>
+
+
+                    <div id="linguagens">
+                        <div class="div_logo">
+                            <img src="imagens/Flask.png" alt="" class="logo">
+                            <h4>Flask</h4>
+                            <p>Intermediário</p>
+                        </div>
+
+                        <div class="div_logo">
+                            <img src="imagens/MySQL.png" alt="" class="logo">
+                            <h4>MySQL</h4>
+                            <p>Intermediário</p>
+                        </div>
+
+                        <div class="div_logo">
+                            <img src="imagens/96b1a91d9b3edab40ee448aa8565c05e.png" alt="" class="logo">
+                            <h4>EvolutionAPI</h4>
+                            <p>Básico</p>
+                        </div>
+
+                        <div class="div_logo">
+                            <img src="imagens/icons8-github-64.png" alt="" class="logo" style="width: 60px; height: 60px;">
+                            <h4>GitHub</h4>
+                            <p>Intermediário</p>
+                        </div>
+
+                        <div class="div_logo">
+                            <img src="imagens/docker.png" alt="" class="logo" style="width: 65px;">
+                            <h4>Docker</h4>
+                            <p>Básico</p>
+                        </div>
+
+
+                    </div>
                 </div>
 
-                <div class="div_logo">
-                    <img src="imagens/CSS3_logo.svg" alt="" class="logo">
-                    <h4>CSS</h4>
+
+
+
+
                 </div>
 
-                <div class="div_logo">
-                    <img src="imagens/Unofficial_JavaScript_logo_2.svg" alt="" class="logo">
-                    <h4>JavaScript</h4>
-                </div>
-
-                <div class="div_logo">
-                    <img src="imagens/MySQL.png" alt="" class="logo">
-                    <h4>MySql</h4>
-                </div>
             </div>
         </section>
 
