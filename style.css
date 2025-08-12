@@ -23,6 +23,7 @@
     --cor-hover: #265DA6;         
     --cor-escura: #02050e;    
     --roxo: #551B6E; 
+    --azul: #265DA6;
 }
 
 
@@ -61,8 +62,10 @@ body, html {
 
 .blur-ball {
   position: fixed;
-  width: 250px;
-  height: 250px;
+  max-width: 200px;
+  width: 40vw;
+  max-height: 200px;
+  height: 40vw;
   border-radius: 50%;
   filter: blur(120px);
   z-index: 0;
@@ -98,16 +101,15 @@ body, html {
 #container {
     display: grid;
     min-height: 100vh;
-    grid-template: 60px auto 500px auto auto/ 1fr;
+    grid-template: 60px auto 500px auto auto auto/ 1fr;
     grid-template-areas:
         "header"
         "menu"
         "boas-vindas"
         "sobre"
-        "habilidades";
+        "habilidades"
+        "contato";
     background-color: var(--preto);
-    
-    
 }
 
 /*--- header ---*/
@@ -357,8 +359,8 @@ div.quem{
 }
 
 #self {
-    width: 350px;
-    height: 500px;
+    width: 100%;
+    height: 400;
 }
 
 
@@ -432,8 +434,9 @@ div.quem{
 
 #habilidades  { 
     display: grid;
-    grid: 1fr 150px 4fr / 1fr 1fr 1fr 1fr 1fr;
-    height: 100vh;
+    grid: 1fr 150px auto / 1fr 1fr 1fr 1fr 1fr;
+    height: auto; 
+    min-height: 100vh;
     background-color: var(--cor-escura);
 }
 
@@ -446,7 +449,7 @@ div.quem{
     
 }
 
-#skills_projetos {
+.h2_titulo {
     color: var(--cor-hover); 
     font-size: 35px; 
     margin: 30px;
@@ -488,10 +491,11 @@ div.quem{
 #projetos {
     display: flex;
     grid-area: 3 / 2 / -1 / 5;   
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
+    height: auto; 
+    min-height: 100vh;
     
 }
 
@@ -582,7 +586,7 @@ div.quem{
 
 #skills {
     display: none;
-    grid: 1fr 1fr 1fr / 1fr;
+    grid: 1fr 1fr / 1fr;
     grid-area: 3 / 2 / 5 / 5;    
     transition: display 0.3s ease;
 }
@@ -663,6 +667,83 @@ div.quem{
 .div_logo:hover p {
     display: inline-block;
 }
+/*--- FIM do Skills---*/
 
 
+/*--- Contato ---*/
 
+#contato{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 24px;
+    max-width: 400px;
+    width: 100%;
+    height: 400px;
+    justify-content: space-around;
+}
+
+.input_contato {
+    max-width: 400px;
+    width: 100%;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    padding-left: 5px;
+    outline: none;
+}
+
+.input_contato:focus, #mensagem:focus {
+    background-color: #d6d6d6; box-shadow: 0 0 0 1px #b6b6b6;
+}
+
+#mensagem {
+    max-width: 400px;
+    width: 100%;
+    min-height: 100px;
+    border-radius: 7px;
+    border: none;
+    padding: 5px;
+    outline: none;
+}
+
+#form > button {
+    padding: 10px 30px;
+    margin-right: 14px;
+    background: linear-gradient(to right, var(--azul) , var(--bebe));
+    cursor: pointer;
+    color: white;
+    z-index: 1;
+    border-radius: 5px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    border: 0px ;
+    border: 0.5px solid var(--cor-hover);
+    transition: transform 0.3s ease;
+}
+
+#form > button:hover {
+    background: linear-gradient(to right, #034aa6c9 , #3f83bfb2 );
+    transform: scale(1.03); 
+}
+
+/*--- FIM do contato ---*/
+
+/*--- Footer ---*/
+footer {
+    
+    background-color: black;
+    height: 150px;
+    position: relative;
+    z-index: 2;   
+}

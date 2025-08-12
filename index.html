@@ -19,6 +19,7 @@
                     <li><a href="#menu">Home</a></li>
                     <li><a href="#sobre">Sobre mim</a></li>
                     <li><a href="#habilidades" id="link-projetos">Projetos e Skills</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
                 <div id="icons">
                     <a href="https://github.com/GabrielAluisio" target="_blank" class="icon">
@@ -83,13 +84,14 @@
             <div id="texto_sobre">
                 <h2 style="color: var(--cor-hover);">Oi, me chamo</h2>
                 <h2 class="espacamento">Gabriel Aluisio Diniz</h2>
-                <p style="margin-bottom: 20px;">Sou estudande de Análise e Desenvolvimento de Sistema, sempre foi 
-                    apaixonado por tecnologia e por aprender novos conhecimentos. Sou movido pela curiosidade e 
-                    pela vontade de saber cada vez mais. Além, sou uma pessoa que sempre gosta de entregar o melhor 
-                    com muita dedicação. Atualmente estou me especializando em Desenvolvimento Back-End, porém como 
-                    pode ver nesse portifólio tenho conhecimentos sobre Front-end.</p>
-                <p>Meu objetivo é aplicar meus conhecimentos para criar soluções criativas, mas futuramente desejo me especializar 
-                    em Desenvolvimento de IA </p>
+                <p style="margin-bottom: 20px;">Desde criança sempre tive interesse por tecnologia, 
+                    passava horas na frente do computador explorando o software e a sua estrutura. 
+                    Isso me levou a ser curioso e aprender coisas novas.
+                </p>
+                <p>Atualmente, sou estudante de Análise e Desenvolvimento de Sistemas, estou me 
+                    especializando em desenvolvimento Back-End. Meu objetivo é aplicar meus conhecimentos 
+                    para criar soluções criativas e, para futuramente, me especializar em desenvolvimento de IA 
+                </p>
             </div>
 
 
@@ -100,7 +102,7 @@
 
         <section id="habilidades" style="grid-area: habilidades;">
             <div id="skills_div">
-                <h2 id="skills_projetos">Projetos e Skills</h2>
+                <h2 class="h2_titulo">Projetos e Skills</h2>
                 <p>Explore meus projetos e minhas experiências.</p>
             </div>
 
@@ -113,7 +115,7 @@
 
                 <button class="div_botoes" onclick="aparecerSkills()"  style="grid-area: 1 / 2 / 2 / 3;">
                     <span class="material-symbols-outlined">lightbulb</span>
-                    <p>Skills</p>
+                    <p style="padding: 0px 7px;">Skills</p>
                 </button>
 
             </div>
@@ -263,14 +265,31 @@
 
                     </div>
                 </div>
-
-
-
-
-
                 </div>
-
             </div>
+        </section>
+
+        <section id="contato" style="grid-area: contato;">
+            <h2 class="h2_titulo">Entre em Contato</h2>
+    
+                
+            <form action="https://formsubmit.co/aluisiogabrieldiniz@gmail.com" method="POST" id="form">
+                    
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://seudominio.com/obrigado.html">
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" class="input_contato" name="nome" placeholder="Seu nome" required >
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" class="input_contato"name="email" placeholder="seuemail@exemplo.com" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem..." required></textarea>
+
+                <button type="submit">Enviar para o E-mail</button>
+            </form>
+
         </section>
 
 
@@ -281,6 +300,8 @@
         
 
     </div>
+
+    <footer>d</footer>
 
     <script src="script.js"></script>
 </body>
