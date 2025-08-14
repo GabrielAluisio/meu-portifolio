@@ -11,19 +11,18 @@
 
 
 
-
-
 :root {
     --preto: #0D0D0D;
     --branco: #D9D9D9;
     --bebe: #3f83bf;
-    --cor-4: #0F969C;
-    --cor-fundo: #0D0D0D;                  
+    --ciano: #0F969C;                 
     --cor-subtitulo: #999999;     
     --cor-hover: #265DA6;         
-    --cor-escura: #02050e;    
+    --cor-fundo: #02050e;    
     --roxo: #551B6E; 
     --azul: #265DA6;
+    --fundo-card: rgba(3, 74, 166, 0.219);
+    --destaque: rgba(3, 74, 166, 0.158);
 }
 
 
@@ -37,7 +36,7 @@ body, html {
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--branco);
-    background-color: var(--cor-escura);
+    background-color: var(--cor-fundo);
     scroll-behavior: smooth;
 }
 
@@ -75,7 +74,7 @@ body, html {
 }
 
 .ball1 {
-  background: var(--cor-4);       /* canto superior esquerdo */
+  background: var(--ciano);       /* canto superior esquerdo */
   top: 0;
   left: 10%;
 }
@@ -101,12 +100,13 @@ body, html {
 #container {
     display: grid;
     min-height: 100vh;
-    grid-template: 60px auto 500px auto auto auto/ 1fr;
+    grid-template: 60px auto 500px auto auto auto auto/ 1fr;
     grid-template-areas:
         "header"
         "menu"
         "boas-vindas"
         "sobre"
+        "estudo"
         "habilidades"
         "contato";
     background-color: var(--preto);
@@ -117,7 +117,7 @@ body, html {
 header {
     position: fixed;
     width: 100%;
-    background-color: var(--cor-fundo);
+    background-color: var(--preto);
     z-index: 1000;
     
 }
@@ -271,7 +271,7 @@ main button {
     letter-spacing: 1px;
 
     border: 0px ;
-    border: 0.5px solid rgba(170, 170, 170, 0.342);
+    border: 0.5px solid var(--fundo-card);
     transition: transform 0.3s ease;
 }
 
@@ -306,7 +306,7 @@ div.quem{
     align-items: center;
     flex-direction: column;
     grid-area: boas-vindas;
-    background: linear-gradient(to bottom, #000000, var(--cor-escura));
+    background: linear-gradient(to bottom, #000000, var(--cor-fundo));
 }
 
 
@@ -323,9 +323,10 @@ div.quem{
 /*--- sobre ---*/
 #sobre{ 
     display: grid;
-    grid-template: 1fr 2fr 1fr / 0.5fr 3fr 3fr 0.5fr;
-    background: var(--cor-escura); ;
-    height: 100vh;
+    grid-template: 1fr 2fr / 0.5fr 3fr 3fr 0.5fr;
+    background: var(--cor-fundo); ;
+    height: auto; 
+    min-height: 100vh;
 }
 
 
@@ -336,7 +337,6 @@ div.quem{
     justify-content: center;
     align-items: center;
     grid-area: 2 / 3 / 3 / 4;
-    height: 100%;
 }
 
 .moldura {
@@ -392,31 +392,6 @@ div.quem{
     margin-bottom: 20px;
  }
 
-.conteiner_sobre {
-    display: grid;
-    grid: 1fr / 2fr 0.5fr ;
-    background-color: rgba(3, 74, 166, 0.233); 
-    margin: 20px 40px;
-    border-radius: 20px;
-    padding: 20px;
-    border: 0.5px solid rgba(170, 170, 170, 0.342);
-    cursor: pointer;
-    transition: transform 0.5s ease, background-color 0.5s ease;
-
-}
-
-.conteiner_sobre:hover {
-    background-color: rgba(3, 74, 166, 0.459); 
-    transform: scale(1.03); 
-}
-
-.conteiner_sobre > div#icon > .material-symbols-outlined {
-    border-radius: 50%;
-    padding: 5px;
-    background-color: #80b7ff34;
-
-
-}
 
 .numeros {
     grid-area: 1 / 2 / 2 / 3;
@@ -427,7 +402,90 @@ div.quem{
     justify-content: space-between;
 
 }
+
+
+@media screen and (max-width: 768px) {
+    #sobre {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 1fr 0.5fr 1fr; 
+        height: auto;
+    }
+
+    #foto {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    #titulo_sobre {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4; 
+    }
+
+    #texto_sobre {
+        grid-column: 1 / 2; 
+        grid-row: 4 / 5;  
+    }
+}
 /*--- Fim de sobre ---*/
+
+
+
+/*--- Estudo ---*/
+
+
+
+
+section#estudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--cor-fundo);
+    height: 100vh;
+}
+
+.div_estudo {
+    background-color: rgba(3, 74, 166, 0.171);
+    border: 1px solid rgba(142, 178, 226, 0.322);
+    border-radius: 14px;
+    height: 450px;
+    width: 60vw;
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0px 20px;
+}
+
+@media screen and (min-width: 751px) {
+    .div_estudo {
+        height: 280px;   
+    }
+}
+
+
+
+.parte_cima {
+    display: flex;
+    align-items: self-start; 
+    gap: 20px;
+}
+
+#icon_estudo {
+    border-radius: 10px;
+    color: var(--cor-hover);
+    padding: 15px;
+    font-size: 25px;
+    background-color: #11315a9f;
+}
+
+
+
+
+
+
+/*--- FIM do Estudo ---*/
 
 
 /*--- habilidades ---*/
@@ -437,7 +495,7 @@ div.quem{
     grid: 1fr 150px auto / 1fr 1fr 1fr 1fr 1fr;
     height: auto; 
     min-height: 100vh;
-    background-color: var(--cor-escura);
+    background-color: var(--cor-fundo);
 }
 
 #skills_div {
@@ -473,7 +531,7 @@ div.quem{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgba(3, 74, 166, 0.158); 
+    background-color: var(--destaque); 
     border-radius: 15px;
     color: white;
     border: 0.5px solid rgba(3, 74, 166, 0.233);
@@ -486,6 +544,8 @@ div.quem{
     background-color: rgba(3, 74, 166, 0.274); 
 
 }
+
+
 
 /*--- projetos ---*/
 #projetos {
@@ -511,7 +571,7 @@ div.quem{
     padding: 20px 20px 15px 20px;
     justify-content: space-between;
     transition: transform 0.2s ease;
-
+    
 }
 
 
@@ -555,7 +615,7 @@ div.quem{
     gap: 10px;
 }
 .painel li {
-    background-color: rgba(3, 74, 166, 0.158); 
+    background-color: var(--destaque); 
     border-radius: 11px;
     padding: 2px 7px;
     border: 0.5px solid rgba(3, 74, 166, 0.233);
@@ -565,7 +625,7 @@ div.quem{
 
 .painel button{
 
-    background-color: rgba(3, 74, 166, 0.158); 
+    background-color: var(--destaque); 
     color: white;
     border: 0.5px solid rgba(3, 74, 166, 0.233);
     padding: 10px;
@@ -610,7 +670,7 @@ div.quem{
     justify-content: center;
     align-items: center;
     background-color: rgba(3, 74, 166, 0.068); 
-    border: 0.5px solid rgba(3, 74, 166, 0.233);
+    border: 0.5px solid var(--fundo-card);
     border-radius: 10px;
     margin-bottom: 20px;
 
@@ -633,7 +693,7 @@ div.quem{
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-color: rgba(3, 74, 166, 0.219); 
+    background-color: var(--fundo-card); 
     padding: 20px;
     border-radius: 10px;
     width: fit-content;
@@ -669,13 +729,11 @@ div.quem{
 }
 /*--- FIM do Skills---*/
 
-
 /*--- Contato ---*/
 
 #contato{
-    height: 100vh;
+    height: 90vh;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 20px;
@@ -719,7 +777,8 @@ div.quem{
 #form > button {
     padding: 10px 30px;
     margin-right: 14px;
-    background: linear-gradient(to right, var(--azul) , var(--bebe));
+    background: transparent; 
+    border: 1px solid white;
     cursor: pointer;
     color: white;
     z-index: 1;
@@ -727,23 +786,11 @@ div.quem{
     font-size: 15px;
     letter-spacing: 1px;
     margin-top: 10px;
-    border: 0px ;
-    border: 0.5px solid var(--cor-hover);
     transition: transform 0.3s ease;
 }
 
 #form > button:hover {
-    background: linear-gradient(to right, #034aa6c9 , #3f83bfb2 );
     transform: scale(1.03); 
 }
 
 /*--- FIM do contato ---*/
-
-/*--- Footer ---*/
-footer {
-    
-    background-color: black;
-    height: 150px;
-    position: relative;
-    z-index: 2;   
-}
