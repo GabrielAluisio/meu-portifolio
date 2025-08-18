@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 @keyframes michel {
     0%, 100% {
         transform: translateY(-10px);
@@ -129,17 +130,19 @@ nav {
     align-items: center;
     height: 100%;
     font-family: 'Source Sans Pro', sans-serif;
+    flex-wrap: wrap;
+    padding: 15px;
+    gap: 15px;
 }
 
 nav ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
+    gap: 20px;
 }
 
-nav li {
-    margin: 20px;
-}
+
 
 nav a {
     color: var(--branco);
@@ -546,7 +549,6 @@ section#estudo {
 #barra_bottons{
     display: grid;
     grid: auto / auto auto;
-
     margin: 20px 0px;
     grid-area: 2 / 2 / 3 / 5;
     background-color: rgba(3, 74, 166, 0.068); 
@@ -654,7 +656,7 @@ section#estudo {
 
 .painel button{
 
-    background-color: rgba(3, 74, 166, 0.171);
+    background-color: rgba(3, 74, 166, 0);
     color: white;
     border: 0.5px solid rgba(3, 74, 166, 0.425);
     padding: 10px;
