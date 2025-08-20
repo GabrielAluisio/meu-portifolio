@@ -35,7 +35,6 @@
 
 body, html {
     position: relative;
-    font-family: Arial, Helvetica, sans-serif;
     color: var(--branco);
     background-color: var(--cor-fundo);
     scroll-behavior: smooth;
@@ -43,9 +42,14 @@ body, html {
 
 .blurs {
   /* Começa oculto */
-  opacity: 0;
+  opacity: 1;
   pointer-events: none; 
   transition: opacity 0.5s ease;
+}
+
+.blurs_ver {
+  opacity: 1;
+  pointer-events: none; 
 }
 
 .blurs.visivel {
@@ -74,6 +78,29 @@ body, html {
 
 }
 
+.ball1_ver {
+  background: #f433aa93;       /* canto superior esquerdo */
+  top: 0;
+  left: 10%;
+}
+
+.ball2_ver {
+  background: var(--roxo);       /* canto superior direito */
+  top: 0;
+  right: 0;
+}
+
+.ball3_ver {
+  background: #df2935;       /* canto inferior esquerdo */
+  bottom: 0;
+  left: 30%;
+}
+
+
+
+
+
+
 .ball1 {
   background: var(--ciano);       /* canto superior esquerdo */
   top: 0;
@@ -101,7 +128,7 @@ body, html {
 #container {
     display: grid;
     min-height: 100vh;
-    grid-template: 45px auto 500px auto auto auto auto/ 1fr;
+    grid-template: 0px auto 500px auto auto auto auto/ 1fr;
     grid-template-areas:
         "header"
         "menu"
@@ -115,6 +142,18 @@ body, html {
 }
 
 
+#conteiner_ver_mais {
+    min-height: 100vh;
+    background-color: var(--cor-fundo);
+    display: grid;
+    grid-template: 53px 45px 1fr 1fr/ 0.5fr 1fr 2fr 0.5fr;
+    grid-template-areas:
+        "header"
+        "voltar"
+        "descricao"
+        "outros";
+}
+
 @media screen and (max-width: 700px){
     
 }
@@ -124,7 +163,7 @@ body, html {
 header {
     position: fixed;
     width: 100%;
-    background-color: var(--preto);
+    background-color: #0d0d0d88;
     z-index: 1000;
     
 }
@@ -176,6 +215,85 @@ nav .icon:hover {
 }
 
 /*--- FIM do header ---*/
+
+
+
+
+
+/*--- Página Ver mais---*/
+
+#voltar {
+    position: relative;
+    z-index: 2; 
+}
+
+#div_voltar {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+
+    
+}
+
+#botao_voltar{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 90px;
+    height: 35px;
+    background-color: rgba(3, 74, 166, 0.171);
+    border: 1px solid rgba(142, 178, 226, 0.322);
+    box-shadow: 0px 0px 10px #3f83bf54;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    gap: 5px;
+    text-decoration: none;
+}
+
+#botao_voltar:hover {
+    background-color: rgba(3, 74, 166, 0.247);
+    transform: scale(1.03); 
+}
+
+#botao_voltar > span {
+    font-size: 17px;
+}
+
+#botao_voltar > h4 {
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+#div_voltar div {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+
+}
+
+#div_voltar  div  a {
+    color: rgba(255, 255, 255, 0.616);
+    text-decoration: none;
+}
+
+#div_voltar  div  a:hover {
+    text-decoration: underline;
+    transform: scale(1.03); 
+}
+
+#div_voltar  div span {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.616);
+    margin-top: 1px;
+} 
+
+
+
+
 
 
 /*--- main ---*/
@@ -438,13 +556,13 @@ div.quem{
 .div_info {
     background-color: rgba(3, 74, 166, 0.171);
     border: 1px solid rgba(142, 178, 226, 0.322);
+    box-shadow: 0px 0px 10px #3f83bf54;
     border-radius: 7px;
     display: flex;
     padding: 10px;
     width: 260px;
     gap: 10px;
-    flex-grow: 1;
-    box-shadow: 0px 0px 10px #3f83bf54;
+    flex-grow: 1;    
     position: relative;
     z-index: 2; 
 }
@@ -749,7 +867,7 @@ section#estudo {
 }
 
 .botao_git {
-    font-size: 15px;
+    font-size: 17px;
     
 }
 
@@ -931,6 +1049,8 @@ section#estudo {
 }
 
 #form > button {
+    box-shadow: 0px 0px 10px #3f83bf79;
+    border-radius: 7px;
     padding: 10px 30px;
     margin-right: 14px;
     background: transparent; 
