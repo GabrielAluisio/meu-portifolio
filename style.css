@@ -110,7 +110,8 @@ body, html {
         "estudo"
         "habilidades"
         "contato";
-    background-color: var(--preto);
+    background-color: var(--cor-fundo);
+    
 }
 
 /*--- header ---*/
@@ -320,8 +321,21 @@ div.quem{
 }
 
 @media screen and (max-width: 700px){
+
+
+    div#nome > h1 {
+        font-size: 75px;
+    }
+
+
+    div#nome > h2 {
+        font-size: 40px;
+        margin-bottom: -25px;        
+    }
+
     #titulo {
         font-size: 25px;
+
     }
 }
 
@@ -443,19 +457,32 @@ div.quem{
     #sobre {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows:1fr 1fr; 
+        grid-template-rows:1fr 0.5fr; 
         height: auto;
+        gap: 50px;
+    }
+
+    #titulo_sobre {
+        font-size: 23px;
+        width: 200px;
+        
     }
 
     #foto {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
+        margin-bottom: 50px;
     }
 
     #div_sobre {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
         padding: 10px 40px;
+    }
+
+    .moldura {
+        width: 300px;
+        height: 300px;
     }
 }
 /*--- Fim de sobre ---*/
@@ -513,8 +540,14 @@ section#estudo {
 }
 
 
+.curso {
+    color: var(--cor-hover);
+}
 
-
+.faculdade {
+    color: rgba(255, 255, 255, 0.664); 
+    letter-spacing: 1px
+}
 
 
 /*--- FIM do Estudo ---*/
@@ -576,6 +609,25 @@ section#estudo {
 
 }
 
+@media screen and (max-width: 700px){
+
+    .h2_titulo {
+        font-size: 30px;
+    }
+
+    .curso {
+        font-size: 23px;
+    }
+
+    .faculdade {
+        font-size: 17px;
+    }
+
+    #barra_bottons{
+        margin: 20px 8vw;
+        grid-area: 2 / 1 / 3 / 6;
+    }
+}
 
 
 /*--- projetos ---*/
