@@ -63,13 +63,13 @@ body, html {
 .blur-ball {
   position: fixed;
   max-width: 200px;
-  width: 40vw;
+  width: 30vw;
   max-height: 200px;
-  height: 40vw;
+  height: 30vw;
   border-radius: 50%;
   filter: blur(120px);
   z-index: 0;
-  opacity: 0.6;
+  opacity: 1;
   pointer-events: none;
 
 }
@@ -101,7 +101,7 @@ body, html {
 #container {
     display: grid;
     min-height: 100vh;
-    grid-template: 60px auto 500px auto auto auto auto/ 1fr;
+    grid-template: 45px auto 500px auto auto auto auto/ 1fr;
     grid-template-areas:
         "header"
         "menu"
@@ -111,6 +111,11 @@ body, html {
         "habilidades"
         "contato";
     background-color: var(--cor-fundo);
+    
+}
+
+
+@media screen and (max-width: 700px){
     
 }
 
@@ -132,7 +137,7 @@ nav {
     height: 100%;
     font-family: 'Source Sans Pro', sans-serif;
     flex-wrap: wrap;
-    padding: 15px;
+    padding: 10px;
     gap: 15px;
 }
 
@@ -666,7 +671,6 @@ section#estudo {
     height: 500px;
     border-radius: 12px;
     background-color: rgba(3, 74, 166, 0.171);
-    
     padding: 20px 20px 15px 20px;
     justify-content: space-between;
     transition: transform 0.2s ease;
@@ -765,7 +769,7 @@ section#estudo {
     border: none;
     box-shadow: 2px 2px 5px #00000033 ;
     gap: 2px;
-    
+    text-decoration: none;
 }
 
 .div_ver_mais:hover {
@@ -777,6 +781,7 @@ section#estudo {
 .ver_mais{
     color: white;
     font-size: 15px;
+    text-decoration: none;
 }
 
 
@@ -784,6 +789,7 @@ section#estudo {
 .div_ver_mais > span {
     font-size: 17px;
     color: white;
+    text-decoration: none;
 }
 
 

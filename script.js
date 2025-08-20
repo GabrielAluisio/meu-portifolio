@@ -2,7 +2,7 @@ window.addEventListener('scroll', () => {
   const altura = window.scrollY;
   const blurs = document.querySelector('.blurs');
 
-  if (altura > 500) {
+  if (altura > 650) {
     blurs.classList.add('visivel');
     blurs.classList.remove('oculto');
   } else {
