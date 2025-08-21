@@ -146,7 +146,7 @@ body, html {
     min-height: 100vh;
     background-color: var(--cor-fundo);
     display: grid;
-    grid-template: 53px 45px 1fr 1fr/ 0.5fr 1fr 2fr 0.5fr;
+    grid-template: 53px 50px 1fr/ 0.5fr 1fr 1fr 0.5fr;
     grid-template-areas:
         "header"
         "voltar"
@@ -220,8 +220,8 @@ nav .icon:hover {
 
 
 
-/*--- Página Ver mais---*/
-
+/*--- Página Ver mais ---*/
+    /*--- Voltar ---*/
 #voltar {
     position: relative;
     z-index: 2; 
@@ -236,12 +236,11 @@ nav .icon:hover {
     
 }
 
-#botao_voltar{
+
+.botao_ver_mais{
     align-items: center;
     justify-content: center;
     display: flex;
-    width: 90px;
-    height: 35px;
     background-color: rgba(3, 74, 166, 0.171);
     border: 1px solid rgba(142, 178, 226, 0.322);
     box-shadow: 0px 0px 10px #3f83bf54;
@@ -253,16 +252,15 @@ nav .icon:hover {
     text-decoration: none;
 }
 
-#botao_voltar:hover {
+.botao_ver_mais:hover {
     background-color: rgba(3, 74, 166, 0.247);
     transform: scale(1.03); 
 }
-
-#botao_voltar > span {
+.botao_ver_mais > span {
     font-size: 17px;
 }
 
-#botao_voltar > h4 {
+.botao_ver_mais > h4 {
     letter-spacing: 1px;
     font-size: 15px;
     font-weight: 400;
@@ -291,9 +289,103 @@ nav .icon:hover {
     margin-top: 1px;
 } 
 
+/*--- FIM Voltar ---*/
+
+#lado_esquerdo {
+    display: flex;
+    flex-direction: column;
+    grid-area: 3 / 2 / -1 / 3;
+    margin-right: 35px;
+    gap: 35px;
+}
+
+#lado_direito {
+    display: flex;
+    flex-direction: column;
+    grid-area: 3 / 3 / -1 / -2;
+    margin-left: 35px;
+    gap: 35px;
+}
 
 
 
+#descricao {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.titulo_ver_mais {
+    color: var(--branco); 
+    font-size: 45px; 
+}
+
+.linha_azul {
+    border-bottom: 2px solid var(--cor-hover);
+    width: 70px;
+}
+
+
+#demonstracao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#painel_ver_mais {
+    background-color: #727272;
+    width: 450px;
+    height: 250px;
+    border-radius: 24px;
+}
+
+.div_tecnologia {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.div_tecnologia ul {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    
+}
+
+.div_tecnologia ul li {
+    padding: 2px 7px;
+    border: 0.5px solid var(--cor-hover);
+    font-size: 15px;
+    list-style: none;
+    box-shadow: 0px 0px 10px #3f83bf54;
+    border-radius: 7px;
+    color: white;
+    white-space: nowrap;
+    padding: 5px 10px;
+}
+
+.texto_ver_mais {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lista_ver_mais {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 14px;
+}
+
+.lista_ver_mais ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 20px;
+}
 
 
 /*--- main ---*/
@@ -368,9 +460,9 @@ div.linha {
 }
 
 div.linha > p#traco {
-    color: var(--bebe);
-    margin: -40px 0px;
-    font-size: 50px;
+    width: 32px;
+    border-bottom: 3px solid var(--cor-hover); 
+    margin-bottom: 8px;
 }
 
 
@@ -643,7 +735,6 @@ section#estudo {
     flex-direction: column;
     justify-content: space-evenly;
     padding: 0px 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     box-shadow: 0px 0px 10px #3f83bf7c;
     position: relative;
     z-index: 2; 
@@ -823,7 +914,7 @@ section#estudo {
 
 
 .painel h2 {
-    margin-bottom: 15px;
+    margin-bottom: 19px;
 }
 
 .painel .conteudo p {
