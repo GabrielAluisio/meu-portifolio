@@ -146,7 +146,7 @@ body, html {
     min-height: 100vh;
     background-color: var(--cor-fundo);
     display: grid;
-    grid-template: 53px 50px 1fr/ 0.5fr 2fr 0.5fr;
+    grid-template: 60px 50px 1fr/ 0.5fr 3.8fr 0.5fr;
     grid-template-areas:
         "header"
         "voltar"
@@ -154,9 +154,6 @@ body, html {
         "outros";
 }
 
-@media screen and (max-width: 700px){
-    
-}
 
 /*--- header ---*/
 
@@ -298,7 +295,7 @@ nav .icon:hover {
     grid-area: 3 / 2 / 4 / 3;
     display: grid;
     grid-template: 1fr 1fr / 1fr 20px 1fr;
-    gap: 20px;
+    gap: 0px;
     z-index: 2;
 }
 
@@ -371,17 +368,23 @@ nav .icon:hover {
     padding: 5px 10px;
 }
 
+.div_funcionalidade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: 2 / 3 / 3 / 4;
+}
+
 .Funcionalidade {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background-color: rgba(93, 3, 166, 0.219);
+    background-color: rgba(93, 3, 166, 0.123);
     border: 1px solid rgba(181, 142, 226, 0.322);
     box-shadow: 0px 0px 10px #3f83bf54;
     border-radius: 20px;
-    height: 290px;
-    padding: 25px;
-    grid-area: 2 / 3 / 3 / 4;
+    width: 450px;
+    padding: 20px 25px;
 }
 
 .Funcionalidade ul {
@@ -389,6 +392,50 @@ nav .icon:hover {
     flex-direction: column;
     gap: 15px;
     margin-left: 20px;
+}
+
+@media screen and (max-width: 800px){
+    #conteiner_ver_mais {
+        grid-template: 120px 50px 1fr/ 0.5fr 3.8fr 0.5fr;
+    }
+}
+
+
+@media screen and (max-width: 1150px){
+    #conteudo_ver_mais { 
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    #descricao {
+        align-items: center;
+    }
+    
+    
+    #painel_ver_mais {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .Funcionalidade {
+        align-items: center;
+        border-radius: 0px;
+        width: 100%;
+        gap: 25px;
+        background-color: transparent;
+        border: transparent;
+        box-shadow: 0px 0px 0px #3f83bf54;
+    }
+
+    .Funcionalidade ul{ 
+        gap: 30px;
+    }
+
+    .div_tecnologia {
+        align-items: center;
+        padding-top: 0px;
+    }
 }
 
 
