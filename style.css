@@ -398,6 +398,16 @@ nav .icon:hover {
     #conteiner_ver_mais {
         grid-template: 120px 50px 1fr/ 0.5fr 3.8fr 0.5fr;
     }
+
+    nav { 
+        grid-template: 1fr / 0fr 4fr ;
+    }
+
+    nav > div {
+        gap: 30px;
+    }
+
+
 }
 
 
