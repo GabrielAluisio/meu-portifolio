@@ -169,21 +169,24 @@ header {
 }
 
 nav { 
-    
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template: 1fr / 0.5fr 4fr 0.5fr;
     height: 100%;
     font-family: 'Source Sans Pro', sans-serif;
-    flex-wrap: wrap;
     padding: 10px;
-    gap: 15px;
+}
+
+nav > div {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav ul {
     display: flex;
-    justify-content: space-around;
     list-style: none;
+    padding: 10px;
     gap: 20px;
 }
 
@@ -200,14 +203,14 @@ nav a:hover {
 
 
 nav #icons {
-    grid-area: 3 / 2 / 4 / 3;
-    z-index: 1;
+    z-index: 1; 
 }
 
 nav .icon {
     font-size: 1.6em; 
     margin: 10px; 
-    color: var(--branco);      
+    color: var(--branco); 
+    
 }
 nav .icon:hover {
     color: var(--cor-hover); 
@@ -318,12 +321,12 @@ nav .icon:hover {
     position: relative;
     z-index: 1;
     flex-direction: column;
-    gap: 7px;
+    gap: 22px;
     grid-area: 1 / 1 / 2 / 2;
 }
 
 #descricao p {
-    line-height: 1.6;
+    line-height: 1.4;
     letter-spacing: 0.5px;
 }
 
@@ -561,7 +564,7 @@ div.quem{
 /*--- sobre ---*/
 #sobre{ 
     display: grid;
-    grid-template: 1fr / 0.5fr 3fr 3fr 0.5fr;
+    grid-template: 1fr / 0.5fr 2fr 2fr 0.5fr;
     background: var(--cor-fundo); ;
     height: auto; 
     min-height: 100vh;
@@ -786,7 +789,7 @@ section#estudo {
 
 #habilidades  { 
     display: grid;
-    grid: 1fr 150px auto / 1fr 1fr 1fr 1fr 1fr;
+    grid: 1fr 150px auto / 0.5fr 1fr 1fr 1fr 0.5fr;
     height: auto; 
     min-height: 100vh;
     background-color: var(--cor-fundo);
@@ -1036,7 +1039,7 @@ section#estudo {
     border: 0.5px solid var(--fundo-card);
     border-radius: 10px;
     margin-bottom: 20px;
-
+    
 }
 
 #linguagens {
@@ -1064,6 +1067,7 @@ section#estudo {
     width: 130px;
     height: 130px;
     box-shadow: 2px 2px 5px #00000059 ;
+    cursor: pointer;
 }
 
 .logo{
