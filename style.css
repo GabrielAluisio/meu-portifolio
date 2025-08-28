@@ -178,6 +178,9 @@ nav > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    
 }
 
 nav ul {
@@ -213,6 +216,13 @@ nav .icon:hover {
     color: var(--cor-hover); 
 
 }
+
+@media screen and (max-width: 700px){
+    nav > div {
+        flex-direction: column;
+    }
+}
+
 
 /*--- FIM do header ---*/
 
@@ -365,6 +375,7 @@ nav .icon:hover {
 .div_tecnologia ul {
     flex-wrap: wrap;
     display: flex;
+
     gap: 10px;
     list-style: none;
     
@@ -451,7 +462,7 @@ nav .icon:hover {
 
 @media screen and (max-width: 800px){
     #conteiner_ver_mais {
-        grid-template: 120px 50px 1fr/ 0.5fr 3.8fr 0.5fr;
+        grid-template: 120px 80px 1fr/ 0.5fr 3.8fr 0.5fr;
     }
 
     .titulo_ver_mais {
@@ -489,6 +500,7 @@ nav .icon:hover {
     }
 
     #descricao{
+        margin-top: 40px;
         align-items: center;
     }
     
@@ -525,6 +537,10 @@ nav .icon:hover {
     .div_tecnologia {
         align-items: center;
         padding-top: 0px;
+    }
+
+    .div_tecnologia ul {
+        justify-content: center;
     }
 }
 
@@ -872,6 +888,7 @@ section#estudo {
     height: 450px;
     width: 60vw;
     max-width: 750px;
+    min-width: 300px;  
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -883,8 +900,9 @@ section#estudo {
 
 @media screen and (min-width: 751px) {
     .div_estudo {
-        height: 280px;   
+        height: 280px; 
     }
+    
 }
 
 
