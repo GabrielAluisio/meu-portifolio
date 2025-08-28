@@ -1303,3 +1303,39 @@ section#estudo {
 }
 
 /*--- FIM do contato ---*/
+
+
+/*--- obrigado ---*/
+section#obrigado {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+section#obrigado a{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: rgba(3, 74, 166, 0.171);
+    border: 1px solid rgba(142, 178, 226, 0.322);
+    box-shadow: 0px 0px 10px #3f83bf54;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    gap: 5px;
+    text-decoration: none;
+}
+
+section#obrigado a:hover {
+    background-color: rgba(3, 74, 166, 0.247);
+    transform: scale(1.03); 
+}
+section#obrigado  span {
+    font-size: 17px;
+}
