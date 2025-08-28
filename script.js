@@ -32,3 +32,20 @@ function aparecerSkills () {
 
 }
 
+function ver_video() {
+  const demontracao = document.getElementById("demonstracao")
+  const video = document.getElementById("painel_ver_mais") || document.getElementById("painel_cheio")
+  const x = document.getElementById("x")
+
+
+  if (video.id === "painel_ver_mais") {
+    video.id = "painel_cheio"
+    demonstracao.className = "video-fullscreen"
+    x.style.display = 'block'
+  } else {
+    x.style.display = 'none'
+    video.id = "painel_ver_mais"
+    demonstracao.className = "demonstracao"
+  }
+}
+
