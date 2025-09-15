@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vou de que?</title>
+    <title>Lista de Tarefas - Full Stack</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -16,11 +16,11 @@
             <nav>
                 <div>
                     <ul>
-                        <li><a href="index.html#home">Home</a></li>
-                        <li><a href="index.html#sobre">Sobre mim</a></li>
-                        <li><a href="index.html#estudo">Educação</a></li>
-                        <li><a href="index.html#habilidades" id="link-projetos">Projetos e Skills</a></li>
-                        <li><a href="index.html#contato">Contato</a></li>
+                        <li><a href="../index.html#home">Home</a></li>
+                        <li><a href="../index.html#sobre">Sobre mim</a></li>
+                        <li><a href="../index.html#estudo">Educação</a></li>
+                        <li><a href="../index.html#habilidades" id="link-projetos">Projetos e Skills</a></li>
+                        <li><a href="../index.html#contato">Contato</a></li>
                     </ul>
                     <div id="icons">
                         <a href="https://github.com/GabrielAluisio/vou-de-que" target="_blank" class="icon">
@@ -45,14 +45,14 @@
 
             <section id="div_voltar">
                 
-                <a class="botao_ver_mais" style="width: 90px; height: 35px;" href="index.html#habilidades">
+                <a class="botao_ver_mais" style="width: 90px; height: 35px;" href="../index.html#habilidades">
                     <span class="material-symbols-outlined">
                         arrow_left_alt
                     </span>
                     <h4>Voltar</h4>
                 </a>
                 <div>
-                    <a href="index.html#habilidades">Projetos</a>
+                    <a href="../index.html#habilidades">Projetos</a>
                     <span class="material-symbols-outlined">
                         keyboard_arrow_right
                     </span>
@@ -64,24 +64,21 @@
         <article id="conteudo_ver_mais">
             <section id="descricao">
                     <h2 class="titulo_ver_mais">
-                        Vou De Que?
+                        Lista de Tarefas - Full Stack
                         <p class="linha_azul"></p>
                     </h2>
-                    <p>Nasceu de uma ideia simples e pessoal,
-                        desde criança, eu sempre perguntava à minha mãe como estava 
-                        o tempo lá fora, se estava frio ou calor, e ela sempre me 
-                        dizia qual peça de roupa era ideal para o clima. Pensando nessa 
-                        necessidade, decidi criar um bot que pudesse dar dicas
-                        de peças de roupa de forma prática.</p>
+                    <p>Lista de Tarefas - Full Stack é um projeto pessoal full stack em que utilizei a 
+                    conexão entre front-end e back-end com integração a banco de dados em uma única 
+                    aplicação.</p>
 
-                        <p>Para tornar isso possível, implementei esse bot no 
-                        WhatsApp, garantindo mais facilidade de acesso e utilizei duas APIs
-                        da OpenWeather para obter previsões detalhadas e precisas.</p>
+                    <p>No front-end, utilizei HTML, CSS e JavaScript para criar a interface do usuário. 
+                    Já no back-end, usei Python com Flask para processar as requisições e integrar com 
+                    um banco de dados MySQL, onde as tarefas podem ser salvas, editadas e excluídas.</p>
             </section>
             
             <section id="demonstracao">
                     <video autoplay muted loop playsinline id="painel_ver_mais" onclick="ver_video()">
-                        <source src="videos/ver_mais_vou.mp4" type="video/mp4" >
+                        <source src="videos/GravaodeTela2025-08-06190918-ezgif.com-crop-video.mp4" type="video/mp4" >
                         Seu navegador não suporta vídeos em HTML5.
                     </video>   
                     <span class="material-symbols-outlined" id="x" onclick="ver_video()">
@@ -94,14 +91,13 @@
                     <h2>Funcionalidade</h2>
                     
                     <ul>
-                        <li>Consulta automática do tempo em vários períodos do dia (manhã, tarde e noite).</li>
+                        <li>Criar, listar, atualizar e excluir tarefas de forma prática (CRUD completo).</li>
 
-                        <li>Sugestões de roupas inteligentes: frio de manhã e calor à tarde? Ele indica camadas que podem ser retiradas.</li>
+                        <li>API RESTful desenvolvida em Flask para comunicação entre front-end e back-end.</li>
 
-                        <li>Alertas de chuva, temperatura, sensação térmica, vento e umidade.</li>
+                        <li>Banco de dados MySQL integrado para armazenamento das tarefas.</li>
 
-                        <li>Consultas de previsão em qualquer cidade do mundo, é só enviar “Mudar cidade para [nome da cidade]”.</li>
-
+                        <li>Interface em HTML, CSS e JavaScript conectada diretamente à API.</li>
                     </ul> 
                     
                 </div>
@@ -112,10 +108,11 @@
                 <h2>Tecnologias Usadas</h2>
                 <ul>
                     <li>Python</li>
-                    <li>Docker</li>
                     <li>Flask</li>
-                    <li>OpenWeather API</li>
-                    <li>WhatsApp API</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>MySQL</li>
                 </ul>
             </div>
             
@@ -123,6 +120,7 @@
         </article>
 
     </div>
+
     
     <script src="script.js"></script>
 </body>
