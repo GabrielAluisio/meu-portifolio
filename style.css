@@ -242,7 +242,6 @@ nav .icon:hover {
     align-items: center;
     height: 100%;
     gap: 20px;
-
     
 }
 
@@ -380,6 +379,8 @@ nav .icon:hover {
     list-style: none;
     
 }
+
+
 
 .div_tecnologia ul li {
     border: 0.5px solid var(--cor-hover);
