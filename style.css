@@ -67,9 +67,9 @@ body, html {
 .blur-ball {
   position: fixed;
   max-width: 200px;
-  width: 30vw;
+  width: 45vw;
   max-height: 200px;
-  height: 30vw;
+  height: 45vw;
   border-radius: 50%;
   filter: blur(120px);
   z-index: 0;
