@@ -49,3 +49,18 @@ function ver_video() {
   }
 }
 
+
+document.getElementById("form").addEventListener("submit", function(event) {
+    event.preventDefault(); // evita o comportamento padrão
+    const form = event.target;
+
+    fetch(form.action, {
+        method: form.method,
+        body: new FormData(form)
+    }).then(() => {
+        // redireciona para sua página Obrigado.html
+        window.location.href = "https://gabrielaluisio.github.io/meu-portifolio/obrigado.html";
+    }).catch(() => {
+        alert("Ocorreu um erro ao enviar o formulário.");
+    });
+});
