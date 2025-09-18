@@ -42,7 +42,7 @@ body, html {
 
 .blurs {
   /* Começa oculto */
-  opacity: 1;
+  opacity: 0;
   pointer-events: none; 
   transition: opacity 0.5s ease;
 }
