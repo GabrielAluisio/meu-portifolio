@@ -1042,7 +1042,7 @@ section#estudo {
 .painel {
     display: flex;
     flex-direction: column;
-    width: 350px;
+    width: 330px;
     height: 500px;
     border-radius: 12px;
     background-color: rgba(3, 74, 166, 0.171);
